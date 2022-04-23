@@ -2,7 +2,8 @@
 
 
 ## 📄 Prelude and Objective ##
-A short guide on how to setup and configure a **_new_** lightning node using LND with recently released PostgreSQL support as database backend. A brief write-up was released by Lightning Labs here: [postgres.md](https://github.com/lightningnetwork/lnd/blob/master/docs/postgres.md)
+
+A short guide on how to setup and configure a **_new_** lightning node using LND with recently released PostgreSQL support as database backend. The  approach was done by creating a new lightning node. To date, backend data migrations are still being developed. A brief write-up for PostgreSQL support was released by Lightning Labs here: [postgres.md](https://github.com/lightningnetwork/lnd/blob/master/docs/postgres.md). Nevertheless it lacks important parts which this guide wants to cover step by step.
 
 ## 📜 Table of Content ##
 
@@ -15,7 +16,7 @@ A short guide on how to setup and configure a **_new_** lightning node using LND
 
 ## 🔎 Preconditions:
 
-This guide is based on the following setup and components. It may be different to Umbrel / Raspiblitz / MyNode / etc. frameworks as it was established on a bolt/bare metal setup running on Ubuntu. 
+The guide is based on the following setup and components. It may be different for Umbrel / Raspiblitz / MyNode installations as it was established on a bolt / bare metal setup running Ubuntu.
 
 - OS: Ubuntu 22.04
 - Setup: bare metal / [bolt setup](https://raspibolt.org/)
@@ -23,7 +24,7 @@ This guide is based on the following setup and components. It may be different t
 - Database Backend: PostgreSQL 14.2 (latest version in ubuntu's repository)
 - **node state: new node without funds and channels (⚠)**
 
-It's important to mention that this setup is initially built as a new lightning node without existing funds or channels. Data migrations between different backends (bbolt, postgres, etcd) are not yet supported (as of v0.14.3).
+It's important to emphasize that this setup is built as a new lightning node without existing funds or channels. As said, data migrations between different backends (bbolt, postgres, etcd) are not yet supported (as of v0.14.3).
 
 ## 🛠 Install and setup PostgreSQL
 
@@ -79,7 +80,7 @@ Configure your `lnd.conf`:
 $ sudo nano /home/lnd/.lnd/lnd.conf
 ```
 
-Edit and add your postgresql config and credentials, like so: postgresql://<user>:<pw>@<ip>:<port>/<db>
+Edit and add your postgresql config and credentials, like so: `postgresql://<user>:<pw>@<ip>:<port>/<db>`
 
 ```ini
 [db]
