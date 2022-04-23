@@ -14,7 +14,7 @@ A short guide on how to setup and configure a **_new_** lightning node using LND
 - [Addendum](#-addendum)
 
 
-## 🔎 Preconditions:
+## 🔎 Preconditions
 
 The guide is based on the following setup and components. It may be different for Umbrel / Raspiblitz / MyNode installations as it was established on a bolt / bare metal setup running Ubuntu.
 
@@ -72,7 +72,7 @@ $ createdb -O lnd lndb
 $ exit
 ```
 
-## 🛠 Configure LND:
+## 🛠 Configure LND
 
 Configure your `lnd.conf`:
 
@@ -111,7 +111,7 @@ Upgrading PostgreSQL should be easy using Postgres' own tool `pg_upgrade`. Insta
 ```
 For more details on this topic, see link in addendum part below. 
 
-## ✴ Addendum: 
+## ✴ Addendum
   
 - [Upgrading PostgreSQL 13 to 14](https://www.kostolansky.sk/posts/upgrading-to-postgresql-14/)
 - [Advanced setup with replication (two instances)](https://github.com/gabridome/docs/blob/master/c-lightning_with_postgresql_reliability.md)
