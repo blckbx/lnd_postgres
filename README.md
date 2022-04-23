@@ -16,8 +16,8 @@ This guide is based on the following setup and components. It may be different t
 
 - bare metal / bolt setup
 - lnd-0.14.3-beta
-- PostgreSQL 14 (ubuntu apt version)
-- new node without funds (⚠)
+- PostgreSQL 14.2 (latest version in ubuntu's repository)
+- new node without funds and channels (⚠)
 
 It's important to mention that this setup was built as a new lightning node without existing funds or channels. Backend migrations are not supported yet by LND (as of v0.14.3).
 
