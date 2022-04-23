@@ -96,7 +96,7 @@ If everything went fine, you can see this in the `lnd.log`:
 
 ## ♻ Upgrade PostgreSQL
   
-Upgrading PostgreSQL should be easy using Postgres' own tool `pg_upgrade`. Install and setup next version in parallel. Upgrade like the following procedure (`--check` = dry-run) from v13 to v14:
+Upgrading PostgreSQL should be easy using Postgres' own tool `pg_upgrade`. Install and setup next version in parallel. Upgrade to new datadir, dry-run before doing the command (`--check` = dry-run) from v13 to v14:
 
 ```
 /usr/lib/postgresql/14/bin/pg_upgrade \
@@ -108,6 +108,7 @@ Upgrading PostgreSQL should be easy using Postgres' own tool `pg_upgrade`. Insta
   --new-options '-c config_file=/etc/postgresql/14/main/postgresql.conf' \
   --check
 ```
+For more details on this topic, see link in addendum part below. 
 
 ## ✴ Addendum: 
   
