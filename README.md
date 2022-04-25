@@ -1,11 +1,11 @@
 # ⚡ Guide: How to setup LND with PostgreSQL
 
 
-## 📄 Prelude and Objective ##
+## 📄 Prelude and Objective
 
 A short guide on how to setup and configure a **_new_** lightning node using LND with recently released PostgreSQL support as database backend. The  approach was done by creating a new lightning node. To date, backend data migrations are still being developed. A brief write-up for PostgreSQL support was released by Lightning Labs here: [postgres.md](https://github.com/lightningnetwork/lnd/blob/master/docs/postgres.md). Nevertheless it lacks important parts which this guide wants to cover step by step.
 
-## 📜 Table of Content ##
+## 📜 Table of Content
 
 - [Preconditions](#-preconditions)
 - [Install and setup PostgreSQL](#-install-and-setup-postgresql)
