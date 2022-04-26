@@ -89,6 +89,15 @@ db.postgres.dsn=postgresql://lnd:password@127.0.0.1:5432/lndb
 db.postgres.timeout=0
 ```
 
+Add postgres as a requirement to LND's systemd service:
+```sh
+[Unit]
+Description=...
+Requires=postgresql.service
+Wants=bitcoind.service
+After=postgresql.service bitcoind.service
+```
+
 If everything went fine, you can see this in the `lnd.log`:
 ```
 [INF] LTND: Opening the main database, this might take a few minutes...
