@@ -35,7 +35,7 @@ Installation process of LND is omitted in this guide as this is widely described
 
 $ sudo apt install postgresql-14 postgresql-server-dev-14
 
-# Configure postgresql to your needs (port, datadir, logging, etc.) or just leave it all to default.
+# Configure postgresql to your needs (port, datadir, logging, etc.) or use default values.
 
 $ sudo nano /etc/postgresql/14/main/postgresql.conf
 
@@ -46,7 +46,7 @@ $ psql
 
 postgres=# \password
 
-# Take note of your password!
+# Enter password and take note of it!
 
 # Quit PSQL
 \q
