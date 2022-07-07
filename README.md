@@ -93,9 +93,9 @@ Add postgres as a requirement to LND's systemd service:
 ```sh
 [Unit]
 Description=...
-Requires=postgresql.service
+Requires=postgresql@.service
 Wants=bitcoind.service
-After=postgresql.service bitcoind.service
+After=postgresql@.service bitcoind.service
 ```
 
 If everything went fine, you can see this in the `lnd.log`:
