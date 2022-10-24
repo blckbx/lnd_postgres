@@ -93,8 +93,7 @@ Add postgres as a requirement to LND's systemd service:
 ```sh
 [Unit]
 Description=...
-Requires=postgresql@.service
-Wants=bitcoind.service
+Requires=postgresql@.service bitcoind.service
 After=postgresql@.service bitcoind.service
 ```
 
