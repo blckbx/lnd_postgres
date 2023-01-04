@@ -20,8 +20,8 @@ The guide is based on the following setup and components. It may be different fo
 
 - OS: Ubuntu 22.04
 - Setup: bare metal / [bolt setup](https://raspibolt.org/)
-- Lightning Implementation: [lnd-0.14.3-beta](https://github.com/lightningnetwork/lnd/releases/tag/v0.14.3-beta)
-- Database Backend: PostgreSQL 14.2 (latest version in ubuntu's repository)
+- Lightning Implementation: [lnd-0.14.3-beta +](https://github.com/lightningnetwork/lnd/releases/tag/v0.14.3-beta)
+- Database Backend: PostgreSQL 14.2 or latest version in ubuntu's repository
 - **node state: new node without funds and channels (⚠)**
 
 It's important to emphasize that this setup is built as a new lightning node without existing funds or channels. As said, data migrations between different backends (bbolt, postgres, etcd) are not yet supported (as of v0.14.3).
@@ -32,37 +32,30 @@ Installation process of LND is omitted in this guide as this is widely described
 
 ```sh
 # Install postgresql-14 
-
 $ sudo apt install postgresql-14 postgresql-server-dev-14
 
 # Configure postgresql to your needs (port, datadir, logging, etc.) or use default values.
-
 $ sudo nano /etc/postgresql/14/main/postgresql.conf
 
 # Setup postgres user
-
 $ sudo -i -u postgres
 $ psql
 
 postgres=# \password
-
 # Enter password and take note of it!
 
 # Quit PSQL
 \q
-
 ```
 
 Create user and database for LND:
 
 ```sh
 # As postgres user
-
 $ sudo -i -u postgres
 
 # Create user 'lnd' and set a password
 $ createuser --createdb --pwprompt lnd
-
 # Enter password and take note of it!
 
 # Create database 'lndb' 
@@ -85,6 +78,8 @@ Edit and add your postgresql config and credentials, like so: `postgresql://<use
 ```ini
 [db]
 db.backend=postgres
+
+[postgres]
 db.postgres.dsn=postgresql://lnd:password@127.0.0.1:5432/lndb?sslmode=disable
 db.postgres.timeout=0
 ```
