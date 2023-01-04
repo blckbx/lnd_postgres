@@ -85,7 +85,7 @@ Edit and add your postgresql config and credentials, like so: `postgresql://<use
 ```ini
 [db]
 db.backend=postgres
-db.postgres.dsn=postgresql://lnd:password@127.0.0.1:5432/lndb
+db.postgres.dsn=postgresql://lnd:password@127.0.0.1:5432/lndb?sslmode=disable
 db.postgres.timeout=0
 ```
 
