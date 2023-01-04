@@ -121,6 +121,7 @@ For more details on this topic, see link in addendum part below.
 
 ## ✴ Addendum
   
+- [System optimization for Postgres](https://pgtune.leopard.in.ua)
 - [Upgrading PostgreSQL 13 to 14](https://www.kostolansky.sk/posts/upgrading-to-postgresql-14/)
 - [Advanced setup with replication (two instances)](https://github.com/gabridome/docs/blob/master/c-lightning_with_postgresql_reliability.md)
 - [Future data migration between backends](https://github.com/lightningnetwork/lnd/blob/7702c90503abf88011e3d436f52926f2a5aa32a7/docs/data-migration.md)
