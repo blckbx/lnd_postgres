@@ -120,9 +120,3 @@ For more details on this topic, see link in addendum part below.
 - [Upgrading PostgreSQL 13 to 14](https://www.kostolansky.sk/posts/upgrading-to-postgresql-14/)
 - [Advanced setup with replication (two instances)](https://github.com/gabridome/docs/blob/master/c-lightning_with_postgresql_reliability.md)
 - [Future data migration between backends](https://github.com/lightningnetwork/lnd/blob/7702c90503abf88011e3d436f52926f2a5aa32a7/docs/data-migration.md)
-  
-_______________________________________________________________
-
-Written by [osito](https://github.com/blckbx). If this guide was of help and you want to share some ♥ and appreciation, please feel free to send a small tip to the ⚡ address: 0x382f9cf667447bb8@ln.tips
-
-[Greetings to the ⚡ Plebs!](https://t.me/plebnet)
