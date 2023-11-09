@@ -32,7 +32,7 @@ Installation process of LND is omitted in this guide as this is widely described
 
 ```sh
 # Install postgresql-14 
-$ sudo apt install postgresql-14 postgresql-server-dev-14
+$ sudo apt install postgresql-14
 
 # Configure postgresql to your needs (port, datadir, logging, etc.) or use default values.
 $ sudo nano /etc/postgresql/14/main/postgresql.conf
